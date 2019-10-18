@@ -1,7 +1,7 @@
 {
     "name": "darthshell/cfs",
     "description": "Calc from string bundle",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "type": "symfony-bundle",
     "authors": [
         {
@@ -15,12 +15,12 @@
     },
     "autoload": {
         "psr-4": {
-            "DarthShelL\\CalcFromStringBundle\\": "src"
+            "DarthShelL\\cfs\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "DarthShelL\\CalcFromStringBundle\\": "src"
+            "DarthShelL\\cfs\\": "src"
         }
     }
 }
