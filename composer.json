@@ -11,12 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-    },
-    "config": {
-        "preferred-install": {
-            "*": "dist"
-        },
-        "sort-packages": true
+        "php": ">=7.1"
     },
     "autoload": {
         "psr-4": {
