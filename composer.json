@@ -1,7 +1,7 @@
 {
     "name": "darthshell/cfs",
     "description": "Calc from string bundle",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "type": "symfony-bundle",
     "authors": [
         {
