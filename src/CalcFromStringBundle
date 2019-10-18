@@ -1,6 +1,6 @@
 <?php
 
-namespace DarthShelL\CalcFromStringBundle;
+namespace DarthShelL\cfs;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
