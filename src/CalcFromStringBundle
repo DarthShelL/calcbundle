@@ -1,0 +1,12 @@
+<?php
+
+namespace DarthShelL\CalcFromStringBundle;
+
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+class CalcFromStringBundle extends Bundle
+{
+    public function calculate($phrase) {
+        return eval($phrase);
+    }
+}
