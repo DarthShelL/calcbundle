@@ -8,9 +8,7 @@
         <service id="cfs.handler" class="darthshell\cfs\CalculateHandler" />
         <service id="darthshell\cfs\CalculateInterface" alias="cfs.handler" />
 
-        <service id="cfs" class="darthshell\cfs\CalculateFromString">
-            <argument type="service" key="$ci" id="cfs.handler"/>
-        </service>
+        <service id="cfs" class="darthshell\cfs\CalculateFromString"/>
         <service id="darthshell\cfs\CalculateFromString" alias="cfs"/>
     </services>
 </container>

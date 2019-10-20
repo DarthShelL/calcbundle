@@ -7,9 +7,9 @@ class CalculateFromString
 {
     private $ci;
 
-    function __construct(CalculateInterface $ci)
+    function __construct(CalculateInterface $ci=null)
     {
-        $this->ci = $ci;
+        $this->ci = $ci??new CalculateHandler();
     }
 
     function calculate(string $input): string
