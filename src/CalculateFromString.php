@@ -12,7 +12,7 @@ class CalculateFromString
         $this->ci = $ci;
     }
 
-    function calculate(string $input): int
+    function calculate(string $input): string
     {
         return $this->ci->calculate($input);
     }

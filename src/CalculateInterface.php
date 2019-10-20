@@ -6,5 +6,5 @@ namespace darthshell\cfs;
 
 interface CalculateInterface
 {
-    function calculate(string $input): int;
+    function calculate(string $input): string;
 }
