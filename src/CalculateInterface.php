@@ -1,7 +1,7 @@
 <?php
 
 
-namespace DarthShelL\CalculateFromStringBundle;
+namespace darthshell\cfs;
 
 
 interface CalculateInterface
