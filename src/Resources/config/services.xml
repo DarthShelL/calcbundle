@@ -5,10 +5,15 @@
         https://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="darthshell\cfs\CalculateInterface" alias="cfs.calculate" />
-        <service id="cfs.calculate" class="darthshell\cfs\CalculateHandler"/>
-        <service id="cfs" class="darthshell\cfs\CalculateFromStringg">
-            <argument key="$ci">cfs.calculate</argument>
+        <service id="cfs.interface" class="darthshell\cfs\CalculateInterface" />
+        <service id="darthshell\cfs\CalculateInterface" alias="cfs.interface" />
+
+        <service id="cfs.handler" class="darthshell\cfs\CalculateHandler" />
+        <service id="darthshell\cfs\CalculateInterface" alias="cfs.handler" />
+
+        <service id="cfs" class="darthshell\cfs\CalculateFromString">
+            <argument type="service" key="$ci"  id="cfs.handler"/>
         </service>
+        <service id="darthshell\cfs\CalculateFromString" alias="cfs"/>
     </services>
 </container>
