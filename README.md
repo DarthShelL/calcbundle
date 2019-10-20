@@ -67,3 +67,4 @@ for example with yaml *cfs.yaml*:
         arguments:
           $ci: '@App\MyCalculate'
           
+Tests also included for free!
