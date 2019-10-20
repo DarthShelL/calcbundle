@@ -4,6 +4,15 @@ This magic bundle for [symfony4](https://symfony.com/) let you calculate basic m
 
 Installation
 ---------------
+add this repository to your project composer.json:
+
+    "repositories": [
+        ...
+        {
+            "type": "vcs",
+            "url": "https://github.com/DarthShelL/calcbundle.git"
+        }
+    ]
 
 use composer to get your own cfs right in project:
 
