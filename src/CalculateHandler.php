@@ -30,7 +30,7 @@ class CalculateHandler implements CalculateInterface
             ));
         }
 
-        if (!preg_match('/^([0-9-+*\/ ]|(\d[.]\d))+$/', $input)) {
+        if (!preg_match('/^([0-9-+*\/() ]|(\d[.]\d))+$/', $input)) {
             throw new \ErrorException(sprintf(
                 'Incorrect input data "%s". Try to use numbers and simple operators e.g. [ + - / * ]',
                 $input
@@ -68,6 +68,41 @@ class CalculateHandler implements CalculateInterface
         if (preg_match('/([\/*+-]{2})/', $input)) {
             throw new \ErrorException(sprintf(
                 'Too many operators',
+                $input
+            ));
+        }
+
+        if (preg_match('/(\(\))/', $input)) {
+            throw new \ErrorException(sprintf(
+                'You\'d better fill in something',
+                $input
+            ));
+        }
+
+        if (preg_match('/([+-\/*]\s?\))/', $input)) {
+            throw new \ErrorException(sprintf(
+                'What\'s wrong with you?',
+                $input
+            ));
+        }
+
+        if (
+            preg_match('/(\()$/', $input)
+            || preg_match('/^(\))/', $input)
+        ) {
+            throw new \ErrorException(sprintf(
+                'Seems to me that you have more "(" than you need',
+                $input
+            ));
+        }
+
+        $m1 = $m2 = [];
+        preg_match_all('/(\()/', $input, $m1);
+        preg_match_all('/(\))/', $input, $m2);
+
+        if (count($m1[0]) !== count($m2[0])) {
+            throw new \ErrorException(sprintf(
+                'Oh boi, you have to get equal count of "(" and ")"',
                 $input
             ));
         }
