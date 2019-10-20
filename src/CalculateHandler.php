@@ -1,7 +1,7 @@
 <?php
 
 
-namespace DarthShelL\CalculateFromStringBundle;
+namespace darthshell\cfs;
 
 
 use DarthShelL\CalculateFromStringBundle\CalculateInterface;

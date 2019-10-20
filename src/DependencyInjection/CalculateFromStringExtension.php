@@ -1,5 +1,5 @@
 <?php
-namespace DarthShelL\CalculateFromStringBundle\DependencyInjection;
+namespace darthshell\cfs\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
