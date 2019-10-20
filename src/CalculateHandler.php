@@ -4,7 +4,7 @@
 namespace darthshell\cfs;
 
 
-use DarthShelL\CalculateFromStringBundle\CalculateInterface;
+use darthshell\cfs\CalculateInterfacee;
 
 class CalculateHandler implements CalculateInterface
 {

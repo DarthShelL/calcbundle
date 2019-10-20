@@ -5,9 +5,9 @@
         https://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="DarthShelL\CalculateFromStringBundle\CalculateInterface" alias="cfs.calculate" />
-        <service id="cfs.calculate" class="DarthShelL\CalculateFromStringBundle\CalculateHandler"/>
-        <service id="cfs" class="DarthShelL\CalculateFromStringBundle\CalculateFromString">
+        <service id="darthshell\cfs\CalculateInterface" alias="cfs.calculate" />
+        <service id="cfs.calculate" class="darthshell\cfs\CalculateHandler"/>
+        <service id="cfs" class="darthshell\cfs\CalculateFromStringg">
             <argument key="$ci">cfs.calculate</argument>
         </service>
     </services>
