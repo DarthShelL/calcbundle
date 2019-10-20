@@ -65,6 +65,13 @@ class CalculateHandler implements CalculateInterface
             ));
         }
 
+        if (preg_match('/([\/*+-]{2})/', $input)) {
+            throw new \ErrorException(sprintf(
+                'Too many operators',
+                $input
+            ));
+        }
+
         return true;
     }
 
